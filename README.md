@@ -27,11 +27,14 @@ Flutter mobile app for agriculture task management and field monitoring.
   - Fix CocoaPods first (see iOS section below)
   - Start a Simulator: `open -a Simulator` (e.g., iPhone 15 Pro)
   - Run: `scripts/run_integration_ios.sh` (or pass a simulator id/name)
+  - Driver/target overrides: `DRIVER=test_driver/integration_test.dart TARGET=integration_test/app_flow_test.dart scripts/run_integration_ios.sh`
  - Web E2E (widget-based on Chrome):
    - Ensure Chrome is installed and Flutter web is enabled: `flutter config --enable-web`
    - Run: `bash scripts/run_integration_web.sh`
      - First time: `chmod +x scripts/run_integration_web.sh`
    - Catatan: paket `integration_test` belum mendukung device web. Skrip ini menjalankan skenario E2E dalam bentuk widget test di Chrome (`test/web_app_flow_test.dart`).
+ - Seeded test login credentials: `admin / admin`
+ - TestSprite scenarios (optional E2E assistant): see `testsprite/README.md`
 
 Notes:
 - If the simulator fails to boot, open it manually via Spotlight (“Simulator”) and retry.

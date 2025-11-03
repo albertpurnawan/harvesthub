@@ -43,3 +43,20 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
+
+# Flutter plugin state files (not needed in VCS)
+.flutter-plugins
+
+# Code generation outputs (when not committed)
+# If you prefer committing generated files, remove these patterns.
+**/*.g.dart
+**/*.freezed.dart
+**/*.drift.dart
+**/*.gr.dart
+**/*.mocks.dart
+
+# Local environment and secrets
+.env
+.env.*
+*.env
+secrets.*
