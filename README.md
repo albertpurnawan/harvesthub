@@ -10,6 +10,7 @@ Flutter mobile app for agriculture task management and field monitoring.
 3. From `harvesthub_mobile`, run `flutter pub get`.
 4. Run code generation: `dart run build_runner build -d`.
 5. Run the app: `flutter run`.
+6. Login with username/password: admin/admin
 
 ## Drift notes
 
