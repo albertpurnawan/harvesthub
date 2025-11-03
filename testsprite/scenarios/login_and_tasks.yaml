@@ -1,0 +1,60 @@
+version: 1
+metadata:
+  name: Login and Tasks Flow
+  description: Login, navigate, create a task, and logout
+
+target:
+  url: http://localhost:8080
+
+steps:
+  - name: Wait for Login screen
+    wait_for:
+      text: "Login"
+
+  - name: Fill Username
+    type:
+      selector:
+        text: "Username"
+      text: "admin"
+
+  - name: Fill Password
+    type:
+      selector:
+        text: "Password"
+      text: "admin"
+
+  - name: Submit Login
+    click:
+      text: "Login"
+
+  - name: Go to Tasks via nav
+    click:
+      text: "Task"
+
+  - name: Open Create Task
+    click:
+      tooltip: "Create Task"
+
+  - name: Select Field
+    click:
+      text: "Field"
+    click:
+      nth: 1
+
+  - name: Select Task Type
+    click:
+      text: "Task Type"
+    click:
+      nth: 1
+
+  - name: Save Task
+    click:
+      text: "Save Task"
+
+  - name: Open Profile from app bar
+    click:
+      tooltip: "Profile"
+
+  - name: Logout
+    click:
+      text: "Logout"

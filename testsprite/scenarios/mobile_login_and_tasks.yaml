@@ -1,0 +1,63 @@
+version: 1
+metadata:
+  name: Mobile Login and Tasks Flow
+  description: Login, create a task, and logout on Android emulator
+
+target:
+  # For Android emulator, Flutter web is not used; this scenario assumes running on real device UI automation via TestSprite mobile support.
+  app:
+    androidPackage: com.example.harvesthub_mobile
+
+steps:
+  - name: Wait for Login screen
+    wait_for:
+      text: "Login"
+
+  - name: Fill Username
+    type:
+      selector:
+        text: "Username"
+      text: "admin"
+
+  - name: Fill Password
+    type:
+      selector:
+        text: "Password"
+      text: "admin"
+
+  - name: Submit Login
+    click:
+      text: "Login"
+
+  - name: Go to Tasks tab
+    click:
+      text: "Task"
+
+  - name: Open Create Task
+    click:
+      tooltip: "Create Task"
+
+  - name: Select Task Type
+    click:
+      text: "Task Type"
+    click:
+      nth: 1
+
+  - name: Select Field
+    click:
+      text: "Field"
+    click:
+      nth: 1
+
+  - name: Save Task
+    click:
+      text: "Save Task"
+
+  - name: Open Profile from app bar
+    click:
+      tooltip: "Profile"
+
+  - name: Logout
+    click:
+      text: "Logout"
+
